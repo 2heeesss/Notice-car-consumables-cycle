@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-image: url("/static/img/ver1.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        section {
+            padding-top: 200px;
+            padding-left: 100px;
+        }
+
+        .contact1,
+        .contact2,
+        .contact3 {
+            padding-bottom: 70px;
+        }
+    </style>
+</head>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('main') }}"><img height="70px" class="img"
+                    src="{{url_for('static', filename='img/logo.png')}}"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main') }}">Logout</a>
+                    </li>
+                    <li class="nav-item active">
+                        <form action="/gogo" method="POST">
+                            <button type="submit" class="btn btn-outline-light text-dark">Home</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form action="/about2" method="POST">
+                            <button type="submit" class="btn btn-outline-light text-dark">About</button>
+                        </form>
+                    </li>
+                    <li class="nav-item active">
+                        <form action="/contact2" method="POST">
+                            <button type="submit" class="btn btn-outline-light text-dark">Contact
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="contact1">
+            <h5>연락처</h5>
+            <small>010-3871-4505</small>
+        </div>
+        <div class="contact2">
+            <h5>이메일</h5>
+            <small>hohooodo@gmail.com</small>
+        </div>
+        <div class="contact3">
+            <h5>주소</h5>
+            <small>서울시 노원구</small>
+        </div>
+    </section>
+
+</body>
+
+</html>

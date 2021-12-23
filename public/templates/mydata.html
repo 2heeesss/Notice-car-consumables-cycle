@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+
+    <!-- 아하하 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    {{ JSGlue.include() }}
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+    <style>
+        .modal2 {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        .modal2 table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .modal2 table td {
+            text-align: left;
+        }
+
+        /* Modal Content/Box */
+        .modal-content2 {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close2 {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close2:hover,
+        .close2:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn2" class="btn btn-outline-primary text-center">차량 데이터 입력하기</button>
+    <!-- The Modal -->
+    <div id="myModal2" class="modal2">
+        <!-- Modal content -->
+        <div class="modal-content2">
+            <span class="close2">&times;</span>
+            <form action="/mydata" method="POST">
+                <table>
+                    <tr>
+                        <th colspan="2">필수 데이터 제공 동의 거부시, 자동으로 회원탈퇴 처리됩니다.</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"> <br></td>
+                    </tr>
+                    <tr>
+                        <td>선택 1. 마케팅 및 상품안내를 위한 개인정보 제공 동의</td>
+                        <td>허용</td>
+                        <td><input type="radio" name="selectAgree1" value="yes"></td>
+                        <td>거부</td>
+                        <td><input type="radio" name="selectAgree1" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>선택 2. 상품개발 연구를 위한 개인 정보 제공 동의 (CARing)</td>
+                        <td>허용</td>
+                        <td><input type="radio" name="selectAgree2" value="yes"></td>
+                        <td>거부</td>
+                        <td><input type="radio" name="selectAgree2" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>필수 1. 개인정보 수집 및 이용 동의</td>
+                        <td>허용</td>
+                        <td><input type="radio" name="necessaryAgree1" value="yes"></td>
+                        <td>거부</td>
+                        <td><input type="radio" name="necessaryAgree1" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>필수 2. 개인정보 제 3자 제공 동의</td>
+                        <td>허용</td>
+                        <td><input type="radio" name="necessaryAgree2" value="yes"></td>
+                        <td>거부</td>
+                        <td><input type="radio" name="necessaryAgree2" value="no"></td>
+                    </tr>
+
+                </table>
+                <div style="text-align: center;">
+                    <button class="btn btn-outline-info" type="submit">개인정보 제공 변경</button>
+                </div>
+                <!-- <label>
+                    <p class="label-txt">삭제하시겠습니까?</p>
+                    선택 허용<input type="radio" name="selectAgree" value="yes">
+                    선택 거부<input type="radio" name="selectAgree" value="no">
+                </label>
+                <label>
+                    <p class="label-txt">삭제하시겠습니까?</p>
+                    필수 허용<input type="radio" name="necessaryAgree" value="yes">
+                    필수 거부(필수사항 거부시 자동으로 회원 탈퇴)<input type="radio" name="necessaryAgree" value="no">
+                    <button type="submit">저장</button>
+                </label> -->
+            </form>
+        </div>
+    </div>
+
+
+    <form action="/upload" method="post">
+        <table>
+            <tr>
+                <td>마지막 차량점검달</td>
+                <td>
+                    <input type="month" name="date" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    차량 구매달
+                </td>
+                <td>
+                    <input type="month" name="firstDate" />
+                </td>
+            </tr>
+            <tr>
+                <td>지금주행키로</td>
+                <td><input type="number" name="kilo" /> </td>
+            </tr>
+            <tr>
+                <td>샀을때 주행키로</td>
+                <td><input type="number" name="getKilo" /></td>
+            </tr>
+            <tr>
+                <td>자동차 연료 종류</td>
+                <td>
+                    <select name="caroil">
+                        <option value="휘발유">휘발유</option>
+                        <option value="경유">경유</option>
+                        <option value="LPG">LPG</option>
+                        <option value="천연가스">천연가스</option>
+                        <option value="등유">등유</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>자동차 종류</td>
+                <td>
+                    <select name="cartype">
+                        <option value="엑센트">엑센트</option>
+                        <option value="벨로스터">벨로스터</option>
+                        <option value="아반떼">아반떼</option>
+                        <option value="투싼">투싼</option>
+                        <option value="아이오닉">아이오닉</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button class="btn btn-outline-info" style="text-align: center;" type="submit">저장</button>
+    </form>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal2');
+        // Get the button that opens the modal
+        var btn = document.getElementById('myBtn2');
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName('close2')[0];
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = 'block';
+        };
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = 'none';
+        };
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+          //Colored by Color Scripter
+
+
+    </script>
+</body>
+
+</html>

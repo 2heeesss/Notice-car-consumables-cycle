@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+    integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+  <!-- 아하하 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  {{ JSGlue.include() }}
+  <meta charset="utf-8" />
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="http://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+
+    @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+  </style>
+
+
+  <!-- 모달4 -->
+  <style>
+    .modal4 {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    .modal4 table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .modal4 table td {
+      text-align: left;
+    }
+
+    /* Modal Content/Box */
+    .modal-content4 {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close4 {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close4:hover,
+    .close4:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <!-- 모달3 -->
+  <style>
+    .modal3 {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    .modal3 table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .modal3 table td {
+      text-align: left;
+    }
+
+    /* Modal Content/Box */
+    .modal-content3 {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close3 {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close3:hover,
+    .close3:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <!-- 모달2 -->
+  <style>
+    .modal2 {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    .modal2 table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .modal2 table td {
+      text-align: left;
+    }
+
+    /* Modal Content/Box */
+    .modal-content2 {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close2 {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close2:hover,
+    .close2:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <!-- 모달1 -->
+  <style>
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    .modal table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .modal table td {
+      text-align: left;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <!-- 일반 -->
+  <style>
+    /* 그래프 */
+    .graph {
+      height: 20px;
+      background: #ccc;
+      border-radius: 30px;
+      width: 70%;
+    }
+
+    .graph span {
+      display: block;
+      padding: 0 10px;
+      height: 20px;
+      line-height: 20px;
+      text-align: right;
+      border-radius: 30px;
+      box-sizing: border-box;
+      color: #fff;
+    }
+
+    .graph.stack1 span {
+      background: #84b1ed;
+      animation: stack1 2s 1;
+      max-width: 100%;
+    }
+
+    .graph.stack2 span {
+      background: #84b1ed;
+      animation: stack2 2s 1;
+      max-width: 100%;
+    }
+
+    .graph.stack3 span {
+      background: #84b1ed;
+      animation: stack3 2s 1;
+      max-width: 100%;
+    }
+
+    .graph.stack4 span {
+      background: #84b1ed;
+      animation: stack4 2s 1;
+      max-width: 100%;
+    }
+
+    .graph.stack5 span {
+      background: #84b1ed;
+      animation: stack5 2s 1;
+      max-width: 100%;
+    }
+
+    .graph.stack6 span {
+      background: #84b1ed;
+      animation: stack6 2s 1;
+      max-width: 100%;
+    }
+
+    .graph.stack7 span {
+      background: #84b1ed;
+      animation: stack7 2s 1;
+      max-width: 100%;
+    }
+
+    .graph.stack8 span {
+      background: #84b1ed;
+      animation: stack8 2s 1;
+      max-width: 100%;
+    }
+
+    .graph.stack9 span {
+      background: #84b1ed;
+      animation: stack9 2s 1;
+      max-width: 100%;
+    }
+
+    .result1,
+    .result2,
+    .result3,
+    .result4,
+    .result5,
+    .result6,
+    .result7,
+    .result8,
+    .result9 {
+      padding: 10px 0;
+    }
+
+    #user__data {
+      padding: 30px 0 10px 0;
+      font-size: 24px;
+    }
+
+    @keyframes stack1 {
+      0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        width: 75;
+      }
+    }
+
+    @keyframes stack2 {
+      0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        width: 60;
+      }
+    }
+
+    @keyframes stack3 {
+      0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        width: 25;
+      }
+    }
+
+    @keyframes stack4 {
+      0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        width: 25;
+      }
+    }
+
+    @keyframes stack5 {
+      0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        width: 25;
+      }
+    }
+
+    @keyframes stack6 {
+      0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        width: 25;
+      }
+    }
+
+    @keyframes stack7 {
+      0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        width: 25;
+      }
+    }
+
+    @keyframes stack8 {
+      0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        width: 25;
+      }
+    }
+
+    @keyframes stack9 {
+      0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        width: 25;
+      }
+    }
+  </style>
+  <!-- 일반2 -->
+  <style>
+    body {
+      background-image: url("/static/img/ver1.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    .section__top {
+      padding-top: 130px;
+    }
+
+    .section__wrap {
+      padding-left: 100px;
+    }
+
+    .section__footer__1 {
+      margin-top: 100px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('main') }}"><img height="70px" class="img"
+          src="{{url_for('static', filename='img/logo.png')}}"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('main') }}">Logout</a>
+          </li>
+          <li class="nav-item active">
+            <form action="/gogo" method="POST">
+              <button type="submit" class="btn btn-outline-light text-dark">Home <span
+                  class="sr-only">(current)</span></button>
+            </form>
+          </li>
+          <li class="nav-item">
+            <form action="/about2" method="POST">
+              <button type="submit" class="btn btn-outline-light text-dark">About </button>
+            </form>
+          </li>
+          <li class="nav-item">
+            <form action="/contact2" method="POST">
+              <button type="submit" class="btn btn-outline-light text-dark">Contact </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <article class="section__wrap">
+    <section class="section__top">
+      <!-- 네비바랑 띄우기 -->
+    </section>
+    <section class="section__header">
+      <h2>
+        {{admin_id}}님 반갑습니다!
+        현재 자동차 상황은 {{state}} 입니다.
+      </h2>
+    </section>
+    <section class="section__middle">
+      <div class="result-wrap">
+        <div class="result1">
+          <span>엔진오일</span>
+          <div class="graph stack1">
+            <span id="enginOil" style="width: 0%">0%</span>
+          </div>
+          <small id="res__enginOil"></small>
+        </div>
+        <div class="result2">
+          <span>엔진오일필터</span>
+          <div class="graph stack2">
+            <span id="enginOilFilter" style="width: 00%">00%</span>
+          </div>
+          <small id="res__enginOilFilter"></small>
+        </div>
+        <div class="result3">
+          <span>냉각수</span>
+          <div class="graph stack3">
+            <span id="coolant" style="width: 0%">0%</span>
+          </div>
+          <small id="res__coolant"></small>
+        </div>
+        <div class="result4">
+          <span>배터리</span>
+          <div class="graph stack4">
+            <span id="battery" style="width: 0%">0%</span>
+          </div>
+          <small id="res__battery"></small>
+        </div>
+        <div class="result5">
+          <span>브레이크오일</span>
+          <div class="graph stack5">
+            <span id="brakeOil" style="width: 0%">0%</span>
+          </div>
+          <small id="res__brakeOil"></small>
+        </div>
+        <div class="result6">
+          <span>브레이크패드</span>
+          <div class="graph stack6">
+            <span id="brakePad" style="width: 0%">0%</span>
+          </div>
+          <small id="res__brakePad"></small>
+        </div>
+        <div class="result7">
+          <span>에어컨필터</span>
+          <div class="graph stack7">
+            <span id="airFilter" style="width: 0%">0%</span>
+          </div>
+          <small id="res__airFilter"></small>
+        </div>
+        <div class="result8">
+          <span>워셔액</span>
+          <div class="graph stack8">
+            <span id="washerFluid" style="width: 0%">0%</span>
+          </div>
+          <small id="res__washerFluid"></small>
+        </div>
+        <div class="result9">
+          <span>와이퍼</span>
+          <div class="graph stack9">
+            <span id="wiper" style="width: 0%">0%</span>
+          </div>
+          <small id="res__wiper"></small>
+        </div>
+      </div>
+    </section>
+    <section class="section__footer__1">
+
+      <!-- 첫번째칸 -->
+      <div style="display: table; width: 50%; height: 600px; float: left;  " class="section__footer__comment1">
+        <div style="display: table-cell; vertical-align: middle;">
+          <h1>{{admin_id}}님만의 자동차 비서 '카링'</h1>
+          <h1>달라지는 자동차 생활</h1>
+          <small>주행정보를 입력하고 <span style="font-weight: bolder;">정확한교체시기</span> 를 얻으세요 <br> 저희 '카링'은 주행km 만으로 교체시기를 측정하지
+            않습니다 <br>사용되는 데이터의 종류는 km
+            ..... </small>
+        </div>
+      </div>
+      <div style="display: table; width: 50%; height: 600px; float: left;  " class="section__footer__img1">
+        <div style="display: table-cell; vertical-align: middle;">
+          <img width="100%" class="img" src="{{url_for('static', filename='img/ill__01.jpg')}}">
+          <div style="text-align: center;" class="upload">
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn" class="btn btn-outline-primary text-center">차량 데이터 입력하기</button>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="/upload" method="post">
+                  <table>
+                    <tr>
+                      <td>마지막 차량점검달</td>
+                      <td>
+                        <input type="month" name="date" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        차량 구매달
+                      </td>
+                      <td>
+                        <input type="month" name="firstDate" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>지금주행키로</td>
+                      <td><input type="number" name="kilo" /> </td>
+                    </tr>
+                    <tr>
+                      <td>샀을때 주행키로</td>
+                      <td><input type="number" name="getKilo" /></td>
+                    </tr>
+                    <tr>
+                      <td>자동차 연료 종류</td>
+                      <td>
+                        <select name="caroil">
+                          <option value="휘발유">휘발유</option>
+                          <option value="경유">경유</option>
+                          <option value="LPG">LPG</option>
+                          <option value="천연가스">천연가스</option>
+                          <option value="등유">등유</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>자동차 종류</td>
+                      <td>
+                        <select name="cartype">
+                          <option value="엑센트">엑센트</option>
+                          <option value="벨로스터">벨로스터</option>
+                          <option value="아반떼">아반떼</option>
+                          <option value="투싼">투싼</option>
+                          <option value="아이오닉">아이오닉</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+                  <button class="btn btn-outline-info" style="text-align: center;" type="submit">저장</button>
+                  <!-- 마지막 차량점검달 <input type="month" name="date" /> <br />
+                  차량 구매달 <input type="month" name="firstDate" /> <br />
+                  지금주행키로<input type="number" name="kilo" /> <br />
+                  샀을때 주행키로<input type="number" name="getKilo" /> <br>
+                  <select name="caroil">
+                    <option value="휘발유">휘발유</option>
+                    <option value="경유">경유</option>
+                    <option value="LPG">LPG</option>
+                    <option value="천연가스">천연가스</option>
+                    <option value="등유">등유</option>
+                  </select> <br>
+                  <select name="cartype">
+                    <option value="엑센트">엑센트</option>
+                    <option value="벨로스터">벨로스터</option>
+                    <option value="아반떼">아반떼</option>
+                    <option value="투싼">투싼</option>
+                    <option value="아이오닉">아이오닉</option>
+                  </select> <br> -->
+                  <!-- <button type="submit">저장</button> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 두번째칸 -->
+      <div style="display: table;vertical-align: middle;  width: 50%; height: 600px; float: left;  "
+        class="section__footer__comment2">
+        <div style="display: table-cell; vertical-align: middle;">
+          <img width="75%" class="img" src="{{url_for('static', filename='img/ill__03.jpg')}}">
+          <!-- <button onclick="pay()">정기결제</button> -->
+          <div style="text-align: center;">
+            <button class="btn btn-outline-primary text-center" onclick="pay()">정기결제</button>
+          </div>
+        </div>
+      </div>
+      <div style="display: table;  width: 50%; height: 600px; float: left;  " class="section__footer__img2">
+        <div style="display: table-cell; vertical-align: middle;">
+          <h1>차량 관리는 번거롭지만</h1>
+          <h1>카링은 쉽습니다</h1>
+          <small>정기결제 한번으로 차량 소모품을 자동으로 관리할수있습니다 <br>교체시기가 다가오면 '카링'이 직접 <span style="font-weight: bolder;">소모품과
+              소모품교체키트를 배송</span> 해드립니다! <br> 월 000원으로 혜택을
+            누리세요</small>
+        </div>
+      </div>
+
+      <!-- 세번째칸 -->
+      <div style="display: table;  width: 50%; height: 600px; float: left;" class="section__footer__comment3">
+        <div style="display: table-cell; vertical-align: middle;">
+          <h1>차량 관리는 번거롭지만</h1>
+          <h1>카링은 쉽습니다</h1>
+          <small>소모품마다 필요한 수량을 맞춰서 주문하세요 <br> 소모품교체키트까지 함께 배송해드립니다 </small>
+        </div>
+      </div>
+      <div style="display: table;  width: 50%; height: 600px; float: left; " class="section__footer__img3">
+        <div style="display: table-cell;vertical-align: middle;">
+          <img height="450px" class="img" src="{{url_for('static', filename='img/ill__02.jpg')}}">
+          <div style="text-align: center;">
+            <a class="btn btn-outline-primary text-center" href="{{ url_for('purchase') }}">개별상품 구매하러가기</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 네번째칸 -->
+      <div style="display: table;  width: 50%; height: 600px; float: left;  " class="section__footer__comment4">
+        <div style="display: table-cell;vertical-align: middle;">
+          <img height="500px" class="img" src="{{url_for('static', filename='img/ill__05.jpg')}}">
+          <div style="text-align: center;">
+            <!-- 모달버튼시작2 -->
+            <button style="width: 200px;" id="myBtn2" class="btn btn-outline-primary text-center">정보동의 변경</button>
+            <div id="myModal2" class="modal2">
+              <div class="modal-content2">
+                <span class="close2">&times;</span>
+                <form action="/mydata" method="POST">
+                  <table>
+                    <tr>
+                      <th colspan="2">필수 데이터 제공 동의 거부시, <span style="color: red;">자동으로 회원탈퇴</span> 처리됩니다.</th>
+                    </tr>
+                    <tr>
+                      <td colspan="2"> <br></td>
+                    </tr>
+                    <tr>
+                      <td>선택 1. 마케팅 및 상품안내를 위한 개인정보 제공 동의</td>
+                      <td>허용</td>
+                      <td><input type="radio" name="selectAgree1" value="yes" checked></td>
+                      <td>거부</td>
+                      <td><input type="radio" name="selectAgree1" value="no"></td>
+                    </tr>
+                    <tr>
+                      <td>선택 2. 상품개발 연구를 위한 개인 정보 제공 동의 (CARing)</td>
+                      <td>허용</td>
+                      <td><input type="radio" name="selectAgree2" value="yes" checked></td>
+                      <td>거부</td>
+                      <td><input type="radio" name="selectAgree2" value="no"></td>
+                    </tr>
+                    <tr>
+                      <td>필수 1. 개인정보 수집 및 이용 동의</td>
+                      <td>허용</td>
+                      <td><input type="radio" name="necessaryAgree1" value="yes" checked></td>
+                      <td>거부</td>
+                      <td><input type="radio" name="necessaryAgree1" value="no"></td>
+                    </tr>
+                    <tr>
+                      <td>필수 2. 개인정보 제 3자 제공 동의</td>
+                      <td>허용</td>
+                      <td><input type="radio" name="necessaryAgree2" value="yes" checked></td>
+                      <td>거부</td>
+                      <td><input type="radio" name="necessaryAgree2" value="no"></td>
+                    </tr>
+                  </table>
+                  <div style="text-align: center;">
+                    <button class="btn btn-outline-info" type="submit">개인정보 제공 변경</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- 모달버튼시작3 -->
+            <button style="width: 200px;" id="B" class="btn btn-outline-primary text-center">마이데이터 다운로드</button>
+            <div id="myModal3" class="modal3">
+              <div class="modal-content3">
+                <span class="close3">&times;</span>
+                <form action="/dataDownload" method="post">
+                  <table>
+                    <tr>
+                      <th colspan="2">원하는 마이데이터를 다운받을수 있어요.</th>
+                    </tr>
+                    <tr>
+                      <td colspan="2"> <br></td>
+                    </tr>
+                    <tr>
+                      <th>데이터 종류</th>
+                      <td>차량 주행데이터<input type="radio" name="n1" value="차량운행 데이터" checked></td>
+                      <td>차량 운행패턴데이터<input type="radio" name="n1" value="사용자 운행패턴 데이터"></td>
+                    </tr>
+                    <tr>
+                      <th>데이터 형식</th>
+                      <td>csv<input type="radio" name="n2" value="csv" checked></td>
+                      <td>xlsx<input type="radio" name="n2" value="xlsx"></td>
+                      <td> HTML<input type="radio" name="n2" value="HTML"></td>
+                    </tr>
+                    <tr>
+                      <th>전송방식</th>
+                      <td>디바이스에 다운로드<input type="radio" name="n3" value="deviceD" checked></td>
+                      <td>이메일 전송<input type="radio" name="n3" value="emailD"></td>
+                    </tr>
+                  </table>
+                  <div style="text-align: center;"> <button class="btn btn-outline-info" style="text-align: center;"
+                      type="submit">저장</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- 모달버튼시작4 -->
+            <button style="width: 200px;" id="Btn4" class="btn btn-outline-primary text-center">마이데이터영수증 다운로드</button>
+            <div id="myModal4" class="modal4">
+              <div class="modal-content4">
+                <span class="close4">&times;</span>
+                <form action="/dataReceipt" method="POST">
+                  <table>
+                    <tr>
+                      <th>사용했던 마이데이터를 영수증으로 확인할수있습니다</th>
+                    </tr>
+                    <tr>
+                      <td>내려받기 내역<input type="radio" name="typeOfr" value="download" checked></td>
+                    </tr>
+                    <tr>
+                      <td> 정보동의 내역<input type="radio" name="typeOfr" value="agree"></td>
+                    </tr>
+                  </table>
+                  <div style="text-align: center;"> <button type="submit">영수증 다운로드받기</button></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: table;  width: 50%; height: 600px; float: left;  " class="section__footer__img4">
+        <div style="display: table-cell; vertical-align: middle;">
+          <h1>마이데이터는 어렵지만</h1>
+          <h1>카링은 쉽습니다.</h1>
+          <small>고객님이 사용하신 데이터 전부 모아두었어요 <br>필요할때마다 어디에 사용했는지 알아보세요!</small>
+        </div>
+      </div>
+    </section>
+    <section class="section__footer__2">
+
+    </section>
+  </article>
+  <footer class="footer__wrap">
+    <div class="footer">
+
+    </div>
+  </footer>
+</body>
+
+
+<!-- 결제모듈 -->
+<script>
+  function pay() {
+    var IMP = window.IMP;
+    var code = "imp48664548";
+    var userId = '{{admin_id}}'
+    var state = '{{state}}'
+
+    console.log(userId, state)
+
+    IMP.init(code);
+
+    // 결제요청
+    IMP.request_pay({
+      // name과 amount만 있어도 결제 진행가능
+      pg: 'html5_inicis', // pg 사 선택
+      pay_method: 'card',
+      merchant_uid: 'merchant_' + new Date().getTime(),
+      name: '주문명:결제테스트_Caring',
+      amount: 100,
+      // buyer_email: 'iamport@siot.do',
+      buyer_name: '{{admin_id}}',
+      // buyer_tel: '010-1234-5678',
+      // buyer_addr: '서울특별시 강남구 삼성동',
+      // buyer_postcode: '123-456',
+      m_redirect_url: 'http://127.0.0.1:5000/mainpage'
+    }, function (rsp) {
+      if (rsp.success) {
+        var msg = '결제가 완료되었습니다.';
+        msg += '고유ID : ' + rsp.imp_uid;
+        msg += '상점 거래ID : ' + rsp.merchant_uid;
+        msg += '결제 금액 : ' + rsp.paid_amount;
+        msg += '카드 승인번호 : ' + rsp.apply_num;
+      }
+      else {
+        var msg = '결제에 실패하였습니다. 에러내용 : ' + rsp.error_msg;
+      }
+      alert(msg);
+      //$.post(Flask.url_for('mainpage', { "admin_id": userId, "state": state }));
+      // location.href = Flask.url_for('mainpage', { "admin_id": userId, "state": state });
+      //location.href = Flask.render_template('mainpage.html', admin_id = userId, state = state)
+    });
+  };
+</script>
+
+<!-- 계산로직 -->
+<script>
+  //파이썬변수
+  console.log((70000 + 48000 + 46000 + 46000 + 24000) / 5);
+
+  const nowDate = '{{now}}';
+  const getDate = '{{firstDate}}';
+  const fixDate = '{{date}}';
+  let nowKilo = '{{kilo}}';
+  let getKilo = '{{getKilo}}';
+
+  console.log(nowDate)
+  console.log(getDate)
+  const nowYear = parseInt(gettYear(nowDate));
+  const getYear = parseInt(gettYear(getDate));
+  const fixYear = parseInt(gettYear(fixDate));
+  const nowMonth = parseInt(gettMonth(nowDate));
+  const getMonth = parseInt(gettMonth(getDate));
+  const fixMonth = parseInt(gettMonth(fixDate));
+
+  console.log(nowYear)
+
+  nowKilo = parseInt(nowKilo);
+  getKilo = parseInt(getKilo);
+  console.log(nowKilo, typeof nowKilo);
+
+  let year = nowYear - getYear;
+  let month = nowMonth - getMonth;
+  let year2 = nowYear - fixYear;
+  let month2 = nowMonth - fixMonth;
+  let newMonth = monthCal(year, month);
+  let newMonth2 = monthCal(year2, month2);
+  let newKilo = nowKilo - getKilo;
+
+  const monthlyAverageKilo = newKilo / newMonth;
+  const predictKilo = monthlyAverageKilo * newMonth2;
+
+  console.log(monthlyAverageKilo, predictKilo)
+  // 엔진 오일
+  // 엔진 오일 필터
+  // 냉각수
+  // 배터리
+  // 브레이크 오일
+  // 브레이크 패드 및 디스크
+  // 에어컨 필터
+  // 와셔액
+  // 와이퍼 블레이드
+  const softEnginOil = 15000;
+  const softEnginOilFilter = 15000;
+  const softcoolant = 40000;
+  const softBattery = 60000;
+  const softbrakeOil = 50000;
+  const softbrakePad = 30000;
+  const softAirFilter = 10000;
+  const softWasherFluid = 5000;
+  const softWiper = 5000;
+
+  let k = document.getElementById('enginOil');
+  k.innerHTML = '111'
+  k.style.width = '1' + '%';
+
+
+
+  let enginOilRemain = replaceCycle(softEnginOil, predictKilo);
+  let enginOilFilterRemain = replaceCycle(softEnginOilFilter, predictKilo);
+  let coolantRemain = replaceCycle(softcoolant, predictKilo);
+  let batteryRemain = replaceCycle(softBattery, predictKilo);
+  let brakeOilRemain = replaceCycle(softbrakeOil, predictKilo);
+  let brakePadRemain = replaceCycle(softbrakePad, predictKilo);
+  let airFilterRemain = replaceCycle(softAirFilter, predictKilo);
+  let washerFluidRemain = replaceCycle(softWasherFluid, predictKilo)
+  let wiperRemain = replaceCycle(softWiper, predictKilo);
+
+  console.log(enginOilRemain)
+  //쓸값들
+  const enginOilPercent = percentResult(enginOilRemain, softEnginOil);
+  const enginOilFilterPercent = percentResult(enginOilFilterRemain, softEnginOilFilter);
+  const coolantPercent = percentResult(coolantRemain, softcoolant);
+  const batteryPercent = percentResult(batteryRemain, softBattery);
+  const brakeOilPercent = percentResult(brakeOilRemain, softbrakeOil);
+  const brakePadPercent = percentResult(brakePadRemain, softbrakePad);
+  const airFilterPercent = percentResult(airFilterRemain, softAirFilter);
+  const washerFluidPercent = percentResult(washerFluidRemain, softWasherFluid);
+  const wiperPercent = percentResult(wiperRemain, softWiper);
+
+  let enginOil = document.getElementById("enginOil");
+  let enginOilFilter = document.getElementById('enginOilFilter');
+  let coolant = document.getElementById('coolant')
+  let battery = document.getElementById('battery')
+  let brakeOil = document.getElementById('brakeOil')
+  let brakePad = document.getElementById('brakePad')
+  let airFilter = document.getElementById('airFilter')
+  let washerFluid = document.getElementById('washerFluid')
+  let wiper = document.getElementById('wiper')
+
+  console.log()
+
+  addStyle(enginOil, enginOilPercent);
+  addStyle(enginOilFilter, enginOilFilterPercent);
+  addStyle(coolant, coolantPercent);
+  addStyle(battery, batteryPercent);
+  addStyle(brakeOil, brakeOilPercent);
+  addStyle(brakePad, brakePadPercent);
+  addStyle(airFilter, airFilterPercent);
+  addStyle(washerFluid, washerFluidPercent);
+  addStyle(wiper, wiperPercent);
+
+  fixHTML(enginOil, enginOilPercent);
+  fixHTML(enginOilFilter, enginOilFilterPercent);
+  fixHTML(coolant, coolantPercent);
+  fixHTML(battery, batteryPercent);
+  fixHTML(brakeOil, brakeOilPercent);
+  fixHTML(brakePad, brakePadPercent);
+  fixHTML(airFilter, airFilterPercent);
+  fixHTML(washerFluid, washerFluidPercent);
+  fixHTML(wiper, wiperPercent);
+
+  if (!monthlyAverageKilo) {
+    enginOil.innerHTML = 0;
+    enginOilFilter.innerHTML = 0;
+    coolant.innerHTML = 0;
+    battery.innerHTML = 0;
+    brakeOil.innerHTML = 0;
+    brakePad.innerHTML = 0;
+    airFilter.innerHTML = 0;
+    washerFluid.innerHTML = 0;
+    wiper.innerHTML = 0;
+  }
+  // enginOil.innerHTML = oneYearStandard + '%';
+  // enginFilter.innerHTML = oneYearStandard + '%';
+  // coolingWater.innerHTML = twoYearStandard + '%';
+  // enginOil.style.width = oneYearStandard + '%';
+  // enginFilter.style.width = oneYearStandard + '%';
+  // coolingWater.style.width = twoYearStandard + '%';
+
+
+
+  // Function
+  function fixHTML(product, productPercent) {
+    return product.innerHTML = productPercent + "%"
+  }
+  function addStyle(product, productPercent) {
+    return product.style.width = productPercent + "%";
+  }
+
+  function percentResult(productRemain, product) {
+    return Math.round(100 - (productRemain / product) * 100);
+  }
+
+  function replaceCycle(product, kilometer) {
+    if (product - kilometer < 0) {
+      return 100;
+    } else {
+      return product - kilometer;
+    }
+  }
+
+  function monthCal(yyear, mmonth) {
+    if (mmonth < 0) {
+      yyear = 1 - yyear;
+      mmonth = 12 + mmonth;
+    }
+    return yyear * 12 + mmonth;
+  }
+
+  function gettYear(date) {
+    return date.substr(0, 4);
+  }
+
+  function gettMonth(date) {
+    return date.substr(5, 2);
+  }
+</script>
+
+<!-- 모달창1 -->
+<script>
+  var modal1 = document.getElementById('myModal');
+  var btn1 = document.getElementById('myBtn');
+  var span1 = document.getElementsByClassName('close')[0];
+  btn1.onclick = function () {
+    modal1.style.display = 'block';
+  };
+  span1.onclick = function () {
+    modal1.style.display = 'none';
+  };
+  window.onclick = function (event) {
+    if (event.target == modal1) {
+      modal1.style.display = 'none';
+    }
+  };
+</script>
+
+<!-- 모달창2 -->
+<script>
+  // Get the modal
+  let modal2 = document.getElementById('myModal2');
+  let btn2 = document.getElementById('myBtn2');
+  let span2 = document.getElementsByClassName('close2')[0];
+  btn2.onclick = function () {
+    modal2.style.display = 'block';
+  };
+  // When the user clicks on <span> (x), close the modal
+  span2.onclick = function () {
+    modal2.style.display = 'none';
+  };
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal2) {
+      modal2.style.display = 'none';
+    }
+  };
+    //Colored by Color Scripter
+
+
+</script>
+
+<!-- 모달창3 -->
+<script>
+  // Get the modal
+  var modal3 = document.getElementById('myModal3');
+  var btn3 = document.getElementById('B');
+  var span3 = document.getElementsByClassName('close3')[0];
+  btn3.onclick = function () {
+    modal3.style.display = 'block';
+  };
+  span3.onclick = function () {
+    modal3.style.display = 'none';
+  };
+  window.onclick = function (event) {
+    if (event.target == modal3) {
+      modal3.style.display = 'none';
+    }
+  };
+</script>
+
+<!-- 모달창4 -->
+<script>
+  var modal4 = document.getElementById('myModal4');
+  var btn4 = document.getElementById('Btn4');
+  var span4 = document.getElementsByClassName('close4')[0];
+  btn4.onclick = function () {
+    modal4.style.display = 'block';
+  };
+  span4.onclick = function () {
+    modal4.style.display = 'none';
+  };
+  window.onclick = function (event) {
+    if (event.target == modal4) {
+      modal4.style.display = 'none';
+    }
+  };
+</script>
+
+
+</html>

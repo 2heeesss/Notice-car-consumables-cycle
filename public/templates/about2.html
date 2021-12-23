@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-image: url("/static/img/ver1.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .article__wrap {
+            padding-top: 200px;
+            padding-left: 100px;
+        }
+
+        .article__wrap span {
+            font-weight: bolder;
+        }
+
+        .section__1,
+        .section__2,
+        .section__3,
+        .section__4 {
+            text-align: center;
+            padding-bottom: 100px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('main') }}"><img height="70px" class="img"
+                    src="{{url_for('static', filename='img/logo.png')}}"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main') }}">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="/gogo" method="POST">
+                            <button type="submit" class="btn btn-outline-light text-dark">Home</button>
+                        </form>
+                    </li>
+                    <li class="nav-item active">
+                        <form action="/about2" method="POST">
+                            <button type="submit" class="btn btn-outline-light text-dark">About<span
+                                    class="sr-only">(current)</span></button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form action="/contact2" method="POST">
+                            <button type="submit" class="btn btn-outline-light text-dark">Contact </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <article class="article__wrap">
+
+        <section class="section__3">
+            <div>
+                <h3>'카링'의 마이데이터</h3>
+            </div>
+            <section>
+                <img style="width: 50%;" src="{{url_for('static', filename='img/my__1.png')}}" alt="">
+            </section>
+        </section>
+        <section class="section__1">
+            <h3>'카링' 만의 강점</h3>
+            <small>누적 주행 거리가 아닌 <span>사용자의 운행데이터</span>에 따라, 사용자별 부품 교체시기를 알려줍니다 <br>
+                교환 부품에 대한 상품 추천과 배송 서비스를 제공합니다 <br>
+                부품 교환에 필요한 <span>정비키트 대여 서비스</span>를 제공합니다 <br>
+                사용한 정비키트와 <span>유해 폐기물을 함께 수거</span>합니다 <br>
+            </small>
+        </section>
+        <section class="section__2">
+            <h3>'카링' 만의 마이데이터 혜택</h3>
+            <small>누적된 차량 정보를 바탕으로 ‘개인 맞춤형 운행패턴 분석’ 리포트를 가공해줍니다 <br>
+                네비게이션 서비스와 차량 유지비용 관리를 위한 프로그램 등에 필요한 데이터를 제공해줍니다 <br>
+                제공받은 마이데이터로 고객의 차량 안전 및 금융관리 서비스를 이용할 수 있다. <br>
+
+            </small>
+        </section>
+        <section class="section__4">
+            <h3>'카링'의 차량정비키트</h3>
+            <small>
+                엔진 오일 – 소켓렌치, 오일필터렌치, 작기, 오일통, 오일 깔대기 <br>
+                브레이크 오일 – 브레이크 블리더 렌치 세트 <br>
+                브레이크 패드 및 디스크 – 작기와 기타 공구 <br>
+                냉각수 – 오일통, 스패너, 렌치 및 공구 <br>
+                배터리 – 스패너(10mm, 12mm), T자 핸들 소켓 <br>
+            </small>
+        </section>
+        <!-- <div>
+            <h3>'카링'의 마이데이터</h3>
+        </div>
+        <section>
+            <img style="width: 60%;" src="{{url_for('static', filename='img/my__1.png')}}" alt="">
+        </section> -->
+    </article>
+
+</body>
+
+</html>

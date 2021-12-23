@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CARing</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- 넣기 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+    integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <style>
+    @font-face {
+      font-family: 'GmarketSansBold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GmarketSansMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GmarketSansLight';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .box {
+      margin-top: 200px;
+    }
+
+    .content div p {
+      position: absolute;
+      left: 50%;
+    }
+
+    body {
+      background-image: url("/static/img/ver1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .btn-container {
+      padding-top: 500px;
+    }
+
+    .ds-btn {
+      position: absolute;
+      left: 50%;
+      top: 65%;
+      margin-left: -230px;
+      margin-top: -50px;
+    }
+
+    .ds-btn li {
+      list-style: none;
+      float: left;
+      padding: 10px;
+    }
+
+    .ds-btn li a span {
+      padding-left: 15px;
+      padding-right: 5px;
+      width: 100%;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .ds-btn li a span small {
+      width: 100%;
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('main') }}"><img height="70px" class="img"
+          src="{{url_for('static', filename='img/logo.png')}}"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('main') }}">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <article class="box">
+
+  </article>
+  <article class="contents">
+    <div style="left: 30%;">
+      <p style="font-size: 30px; position: absolute; text-align: center; left: 32%; ">당신의
+        차에 관심을 갖고 보살필 수 있는 <br>
+        사용자별 자동차 <span style=" color: blue; font-family: GmarketSansMedium;"> 소모품 교환주기 알림 </span> 서비스
+      </p>
+    </div>
+    <div class="btn-container">
+    </div>
+    <div class="row">
+      <ul class="ds-btn">
+        <li>
+          <a style="width: 200px;" class="btn btn-outline-primary text-center" href="{{ url_for('login') }}">
+            <i class="fa fa-user pull-left"></i><span>로그인<br /><small>If you arleady have Id</small></span></a>
+        </li>
+        <li>
+          <a style="width: 200px;" class="btn btn-outline-info" href="{{ url_for('realmain')}}">
+            <i class="fa fa-hospital-o pull-left"></i><span>회원가입<br /><small>Create your own Id</small></span></a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </article>
+
+</body>
+
+</html>
